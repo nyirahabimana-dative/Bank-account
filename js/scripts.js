@@ -28,14 +28,14 @@ $(document).ready(function() {
     newAccount.deposit(inputtedBalance);
     $(".balance").text(newAccount.balance);
     });
-    $("form#manage").submit(function(event) {
+    $("form#amount1").submit(function(event) {
     event.preventDefault();
     var newBalance = parseInt($("input#deposit").val());
     newAccount.deposit(newBalance);
     $(".balance").text(newAccount.balance);
 
     });
-    $("form#withdraw").submit(function(event) {
+    $("form#amount2").submit(function(event) {
     event.preventDefault();
     var newBalance = parseInt($("input#withdraw").val());
     newAccount.withdraw(newBalance);
