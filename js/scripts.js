@@ -1,7 +1,18 @@
 
+ function Balance(name,initialdeposit) {
+    this.name = name;
+    this.initialdeposit = initialdeposit;
+    
+   }
+   Balance.prototype.withdrawal= function(amount) {
+    this.withdrawal -=amount
+}
+Balance.prototype.deposit=function(amount){
+    this.deposit +=amount
+}
 var BankAccount = {
     balance: 0,
-    withdraw: function(amount) {
+    withdrawal: function(amount) {
        this.balance -= amount;
     },
     deposit: function(amount) {
@@ -27,8 +38,8 @@ $(document).ready(function() {
     });
     $("form#amount2").submit(function(event) {
     event.preventDefault();
-    var newBalance = parseInt($("input#withdraw").val());
-    newAccount.withdraw(newBalance);
+    var newBalance = parseInt($("input#withdrawal").val());
+    newAccount.withdrawal(newBalance);
     $(".balance").text(newAccount.balance);
     });
     });
