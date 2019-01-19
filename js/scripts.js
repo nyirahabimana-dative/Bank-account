@@ -1,21 +1,11 @@
-function Balance(name,initialdeposit) {
-    this.name = name;
-    this.initialdeposit = initialdeposit;
-  }
 
-   Balance.prototype.withdraw= function(amount) {
-    this.withdraw=this.balance-amount
-}
-Balance.prototype.deposit=function(amount){
-    this.deposit=this.balance+amount
-}
 var BankAccount = {
     balance: 0,
     withdraw: function(amount) {
-       this.balance = this.balance - amount;
+       this.balance -= amount;
     },
     deposit: function(amount) {
-       this.balance = this.balance + amount;
+       this.balance +=  amount;
     }
     };
 $(document).ready(function() {
@@ -42,3 +32,4 @@ $(document).ready(function() {
     $(".balance").text(newAccount.balance);
     });
     });
+    
